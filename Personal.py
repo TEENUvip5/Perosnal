@@ -6,7 +6,7 @@ from threading import Thread
 
 loop = asyncio.new_event_loop()
 
-TOKEN = "7935325204:AAFtJfKA-O3IMMYmbJW4vyTHo0zr6v2VxKw"
+TOKEN = "7935325204:AAGGYWXfwcf5xmEhmuxU8a26ku9xT2RL5Dk"
 FORWARD_CHANNEL_ID = --1002354151287
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -145,7 +145,7 @@ def process_bgmi_command(message):
 async def run_bgmi_command_async(target_ip, target_port, duration):
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./bgmi {target_ip} {target_port} {duration} {10} {1000}",
+            f"./bgmi {target_ip} {target_port} {duration} {18} {1900}",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
